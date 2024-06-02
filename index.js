@@ -8,7 +8,11 @@ const Ticket = require("./models/Ticket.model.js")
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin : ["https://dashboard-one-rho-59.vercel.app/"],
+    methods : ["GET", "POST", "PUT", "DELETE"],
+    credentials : true
+}));
 app.use(express.json())
 
 app.listen(3001 , () => {
