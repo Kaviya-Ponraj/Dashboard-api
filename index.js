@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const Motor = require('./models/motor.model.js')
 
@@ -13,7 +14,8 @@ app.use(cors({
     methods : ["GET", "POST", "PUT", "DELETE"],
     credentials : true
 }));
-app.use(express.json())
+// app.use(express.json())
+app.use(bodyParser.json()); app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(3001 , () => {
          console.log("Server started in port 3001");
