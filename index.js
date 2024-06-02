@@ -10,7 +10,7 @@ const Ticket = require("./models/Ticket.model.js")
 
 const app = express();
 app.use(cors({
-    origin : ["https://dashboard-one-rho-59.vercel.app/"],
+    origin : "*",
     methods : ["GET", "POST", "PUT", "DELETE"],
     credentials : true
 }));
