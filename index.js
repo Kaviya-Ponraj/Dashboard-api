@@ -163,7 +163,7 @@ app.put("/tickets/:id" , async (req, res) => {
 
 
 // deleting a data
-app.delete("/motors/:id" , async (req, res) => {
+app.delete("/tickets/:id" , async (req, res) => {
     try {
         const { id } = req.params;
         
